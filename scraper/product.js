@@ -25,6 +25,8 @@ const scraper_Product = (browser, url) =>
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.36"
       );
       await newPage.goto(url);
+      await newPage.setViewport({ width: 1080, height: 1024 });
+
       //console.log("vao " + url);
       await autoScroll(newPage);
 

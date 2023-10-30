@@ -10,11 +10,11 @@ const scraperController_ProductCard = async (browserInstance) => {
     let browser = await browserInstance;
     let category = data.category;
     let rs = [];
-    for (let j = 0; j < category.length; j++) {
+    for (let j = 0; j < 2; j++) {
       let url = category[j].href;
       let productCard = await scraper.scraper_ProductCard(browser, url);
       for (let i = 0; i < productCard.length; i++) {
-        console.log("vao " + [i]);
+        console.log("vao product " + [i + 1]);
         let dom = new JSDOM(productCard[i].html);
         let img = dom.window.document
           .querySelector(".image-wrapper picture source")

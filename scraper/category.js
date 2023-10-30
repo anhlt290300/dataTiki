@@ -7,6 +7,8 @@ const scraper_Category = (browser, url) =>
       );
       await newPage.goto(url);
       console.log("vao " + url);
+      await newPage.setViewport({width: 1080, height: 1024});
+
 
       await newPage.waitForSelector(
         ".styles__StyledSideBar-sc-s7dkhn-0.jZosWU"
